@@ -30,15 +30,17 @@ class LoginTests: KIFTestCase {
         super.tearDown()
     }**/
     
-    func testEmptyUsernameAndPassword() {
+    override func beforeEach() {
         clearOutUsernameAndPasswordFields()
+    }
+    
+    func testEmptyUsernameAndPassword() {
         tapButton(buttonName: "Login")
         expectToSeeAlert(text: "Username cannot be empty")
         tapButton(buttonName: "OK")
     }
     
     func testEmptyPassword() {
-        clearOutUsernameAndPasswordFields()
         fillInUsername()
         tapButton(buttonName: "Login")
         expectToSeeAlert(text: "Password cannot be empty")
