@@ -11,12 +11,8 @@ import KIF
 
 class HomeTests: BaseUITests {
     
-    override func beforeAll() {
-        useTestDatabase()
-    }
-    
     override func beforeEach() {
-        backToRoot()
+        super.beforeEach()
         haveNoNotes()
     }
     
@@ -27,15 +23,14 @@ class HomeTests: BaseUITests {
     }
     
     func testCreateNewNote() {
-        haveNoNotes()
         visitHomeScreen()
         tapButton(buttonName: "Add note")
         expectTheCreateButtonToBeDisabled()
-        fillInNoteTitle("new note")
+        fillInNoteTitle("New note")
         expectTheCreateButtonToBeEnabled()
-        fillInNoteBody("new body")
+        fillInNoteBody("New body")
         tapButton(buttonName: "Create")
-        expectToSeeNoteWithTitle("new note", body: "new body", atRow: 0)
+        expectToSeeNoteWithTitle("New note", body: "New body", atRow: 0)
         expectNumberOfNotesInListToEqual(count: 1)
     }
     
@@ -43,10 +38,10 @@ class HomeTests: BaseUITests {
         have3notes()
         visitHomeScreen()
         tapOnNoteAtRow(1)
-        updateNoteTitleTo("updated note")
-        updateNoteBodyTo("updated body")
+        updateNoteTitleTo("Updated note")
+        updateNoteBodyTo("Updated body")
         tapButton(buttonName: "Update")
-        expectToSeeNoteWithTitle("updated note", body: "updated body", atRow: 1)
+        expectToSeeNoteWithTitle("Updated note", body: "Updated body", atRow: 1)
     }
     
     func testDeleteNotes() {

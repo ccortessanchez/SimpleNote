@@ -25,6 +25,8 @@ class HomeViewController: UIViewController {
     super.viewDidLoad()
     updateNotes()
     NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.onNewNoteCreated), name: NSNotification.Name(rawValue: notificationNewNoteCreated), object: nil)
+    notesTableView.accessibilityLabel = "Note - TableView"
+    notesTableView.isAccessibilityElement = true
   }
 
   @IBAction func onTapAddNoteButton(_ sender: AnyObject) {
