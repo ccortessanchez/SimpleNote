@@ -30,10 +30,23 @@ class LoginTests: KIFTestCase {
         super.tearDown()
     }**/
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        tester().tapView(withAccessibilityLabel: "hello")
+    func testEmptyUsernameAndPassword() {
+        clearOutUsernameAndPasswordFields()
+        tapButton(buttonName: "Login")
+        expectToSeeAlert(text: "Username cannot be empty")
+        tapButton(buttonName: "OK")
     }
     
+    func clearOutUsernameAndPasswordFields() {
+        tester().clearTextFromView(withAccessibilityLabel: "Login - Username")
+        tester().clearTextFromView(withAccessibilityLabel: "Login - Password")
+    }
+    
+    func tapButton(buttonName: String) {
+        tester().tapView(withAccessibilityLabel: buttonName)
+    }
+    
+    func expectToSeeAlert(text: String) {
+        tester().waitForView(withAccessibilityLabel: text)
+    }
 }
