@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AE179481F581FC3007A229B /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE179471F581FC3007A229B /* KIF+Extensions.swift */; };
 		0AE1794D1F582344007A229B /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1794C1F582344007A229B /* LoginTests.swift */; };
+		0AE1794F1F58283E007A229B /* LoginSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1794E1F58283E007A229B /* LoginSteps.swift */; };
 		18EEB4481DB64101008D21CC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEB4471DB64101008D21CC /* UIColor+Extensions.swift */; };
 		5C69C7670C05E68283E6F527 /* Pods_SimpleNoteTakingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D437614AF6B069613D49D48A /* Pods_SimpleNoteTakingAppTests.framework */; };
 		F3594B391D99FCC70046DA07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3594B381D99FCC70046DA07 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		0AE179471F581FC3007A229B /* KIF+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
 		0AE179491F58229B007A229B /* SimpleNoteTakingAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleNoteTakingAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0AE1794C1F582344007A229B /* LoginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		0AE1794E1F58283E007A229B /* LoginSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSteps.swift; sourceTree = "<group>"; };
 		1323CB2C6BD0545FD3CB39A8 /* Pods-SimpleNoteTakingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingAppTests/Pods-SimpleNoteTakingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		18EEB4471DB64101008D21CC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		3E2CA09BCFDC21D5160FD669 /* Pods-SimpleNoteTakingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleNoteTakingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleNoteTakingApp/Pods-SimpleNoteTakingApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				F3594B4F1D99FCC70046DA07 /* Info.plist */,
 				0AE179491F58229B007A229B /* SimpleNoteTakingAppTests-Bridging-Header.h */,
 				0AE1794C1F582344007A229B /* LoginTests.swift */,
+				0AE1794E1F58283E007A229B /* LoginSteps.swift */,
 			);
 			path = SimpleNoteTakingAppTests;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				0AE1794D1F582344007A229B /* LoginTests.swift in Sources */,
 				0AE179481F581FC3007A229B /* KIF+Extensions.swift in Sources */,
 				F3594B4E1D99FCC70046DA07 /* SimpleNoteTakingAppTests.swift in Sources */,
+				0AE1794F1F58283E007A229B /* LoginSteps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
