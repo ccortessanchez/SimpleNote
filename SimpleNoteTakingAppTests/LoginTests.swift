@@ -46,4 +46,12 @@ class LoginTests: KIFTestCase {
         expectToSeeAlert(text: "Password cannot be empty")
         tapButton(buttonName: "OK")
     }
+    
+    func testWrongUsernameOrPassword() {
+        fillInUsername()
+        fillInWrongPassword()
+        tapButton(buttonName: "Login")
+        expectToSeeAlert(text: "Username or password is incorrect")
+        tapButton(buttonName: "OK")
+    }
 }
