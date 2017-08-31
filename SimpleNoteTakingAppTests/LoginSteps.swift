@@ -12,19 +12,16 @@ extension LoginTests {
         tester().clearTextFromView(withAccessibilityLabel: "Login - Password")
     }
     
-    func tapButton(buttonName: String) {
-        tester().tapView(withAccessibilityLabel: buttonName)
-    }
-    
-    func expectToSeeAlert(text: String) {
-        tester().waitForView(withAccessibilityLabel: text)
-    }
-    
-    func fillInUsername() {
-        tester().enterText("appcoda", intoViewWithAccessibilityLabel: "Login - Username")
-    }
-    
     func fillInWrongPassword() {
         tester().enterText("wrongPassword", intoViewWithAccessibilityLabel: "Login - Password")
+    }
+    
+    func expectToGoToHomeScreen() {
+        tester().waitForAbsenceOfView(withAccessibilityLabel: "Login - Username")
+        tester().waitForAbsenceOfView(withAccessibilityLabel: "Login - Password")
+        tester().waitForAbsenceOfView(withAccessibilityLabel: "Login")
+        
+        tester().waitForView(withAccessibilityLabel: "No notes")
+        tester().waitForView(withAccessibilityLabel: "Add note")
     }
 }
