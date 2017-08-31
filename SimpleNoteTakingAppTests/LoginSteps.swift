@@ -19,4 +19,8 @@ extension LoginTests {
     func expectToSeeAlert(text: String) {
         tester().waitForView(withAccessibilityLabel: text)
     }
+    
+    func fillInUsername() {
+        tester().enterText("appcoda", intoViewWithAccessibilityLabel: "Login - Username")
+    }
 }
