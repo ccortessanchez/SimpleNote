@@ -1,4 +1,8 @@
 PODS:
+  - KIF (3.6.0):
+    - KIF/Core (= 3.6.0)
+  - KIF/Core (3.6.0)
+  - Nimble (7.0.1)
   - Realm (2.0.2):
     - Realm/Headers (= 2.0.2)
   - Realm/Headers (2.0.2)
@@ -6,6 +10,8 @@ PODS:
     - Realm (= 2.0.2)
 
 DEPENDENCIES:
+  - KIF
+  - Nimble
   - Realm (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
   - RealmSwift (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
 
@@ -30,9 +36,11 @@ CHECKOUT OPTIONS:
     :submodules: true
 
 SPEC CHECKSUMS:
+  KIF: bd770edd8ce49bc7308501e4871e58a02d137be3
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
 
-PODFILE CHECKSUM: ffb188abf87d7821a86ab908d78c7cc2e084e326
+PODFILE CHECKSUM: 093a33ed2af7887f225e307ddd5bb108182ea85a
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1

@@ -8,6 +8,8 @@ target 'SimpleNoteTakingApp' do
 
   target 'SimpleNoteTakingAppTests' do
     inherit! :search_paths
+    pod 'KIF'
+    pod 'Nimble'
   end
 
   post_install do |installer|
